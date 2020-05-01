@@ -53,7 +53,7 @@ print("")
 #question 1-C
 x =[]
 y =[]
-for i in range(40,60,1):
+for i in range(30,60,1):
     calcul_proba_blocage(B,i)
 trace_courbe(x,y)
 print("")
@@ -62,10 +62,10 @@ print("")
 x =[]
 y =[]
 for i in range(20,41,1):   
-    if 1 <= 40:
-        C =lambda_A+lambda_B
+    if 1 <= 40: #teste si le nombre de canaux occupé est inférieur a une valeur seuil (nb de canaux libre)(C1 ≤ C2),
+        C =lambda_A+lambda_B # si tt les canaux sont pas utilisé
     else:
-        C =lambda_B
+        C =lambda_B #si tout les canaux utilisé => priorise les appel handover
     calcul_proba_blocage(C,i)
 trace_courbe(x,y)
 print("")
