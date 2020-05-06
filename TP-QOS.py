@@ -66,14 +66,15 @@ print("")
 #mu = 1/5
 y =[]
 lambda_filtre=0
-for C1 in range(38,41,1):
+for C1 in range(20,41,1):
+    lambda_filtre=0
     print("C1 = ",C1)
     for i in range(1,41,1):   
         if i <=C1: #teste si le nombre de canaux occupé est inférieur a une valeur seuil (nb de canaux libre)(C1 ≤ C2),
             lambda_filtre+=7 
         else:
             lambda_filtre+=2 
-    lambda_filtre=lambda_filtre/40
+    lambda_filtre=lambda_filtre/i
     print("lambda filtré = ",lambda_filtre)
     cal.append(C1)
     calcul_proba_blocage(lambda_filtre,1/5,40)
